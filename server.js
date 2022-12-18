@@ -7,6 +7,7 @@ import dotenv from "dotenv";
 import todoRoutes from "./routes/todos.js";
 
 dotenv.config();
+
 const app = express();
 
 // middlewares.
@@ -21,8 +22,10 @@ const PORT = process.env.PORT || 5000;
 
 // connection to mongodb
 
+const dbURL = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.jjuc2ok.mongodb.net/?retryWrites=true&w=majority`;
+
 mongoose
-  .connect(process.env.CONNECTION_URL, {
+  .connect(dbURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
