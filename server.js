@@ -6,9 +6,8 @@ import dotenv from "dotenv";
 
 import todoRoutes from "./routes/todos.js";
 
-const app = express();
-
 dotenv.config();
+const app = express();
 
 // middlewares.
 
