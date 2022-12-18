@@ -20,7 +20,7 @@ app.use("/todos", todoRoutes);
 
 const PORT = process.env.PORT || 5000;
 
-// connection to mongodb
+// connection to mongodb.
 
 const dbURL = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.jjuc2ok.mongodb.net/?retryWrites=true&w=majority`;
 
